@@ -38990,13 +38990,23 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _vm._v(
-      '\n    Nothing much to see here in the welcome page. click on the link on the left "Person Collection".\n'
-    )
-  ])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("h2", [
+        _c("i", { staticClass: "fa fa-question-circle" }),
+        _vm._v(
+          'Welcome to this project. click on the link on the "Person Collection" link for more action.'
+        )
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 

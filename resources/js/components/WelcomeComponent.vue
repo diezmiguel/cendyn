@@ -1,6 +1,6 @@
 <template>
 <div>
-    Nothing much to see here in the welcome page. click on the link on the left "Person Collection".
+    <h2><i class="fa fa-question-circle"></i>Welcome to this project. click on the link on the "Person Collection" link for more action.</h2>
 </div>
 </template>
 <script>
