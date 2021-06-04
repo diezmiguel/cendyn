@@ -4,7 +4,7 @@
 This project ois a code challenge for Cendyn job application. Below are the steps to run locally.
 1. Clone the project in your local computer.
 2. run "composer install"
-3. run "npm run dev"
+3. run "npm run install && npm run dev"
 4. run "php artisan server"
 5. go to your browser and access via "http://localhost:8000"
 
