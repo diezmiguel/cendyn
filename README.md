@@ -4,10 +4,11 @@
 This project ois a code challenge for Cendyn job application. Below are the steps to run locally.
 1. Clone the project in your local computer.
 2. run "composer install"
-3. run "npm run dev"
+3. run "npm run install && npm run dev"
 4. run "php artisan server"
 5. go to your browser and access via "http://localhost:8000"
 
+FYI: For this project I have commited the ".env" because I added some variables there. In a real world the .env would be created based on the environment being used.
 ## BONUS ITEMS
 I have done some unit tests that can be ran following the steps below:
 1. Got your command line(in the root of the project) then type the following command: ./vendor/bin/phpunit tests/Unit --testdox
