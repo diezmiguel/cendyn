@@ -29,7 +29,7 @@
       <tr>
           <th colspan="6">
               <i class="fa fa-user-friends"></i>
-                Person List<button class="btn btn-success btn-sm refresh-btn-align" @click="getPersonList()">Refresh List</button> Collection Size: <input type="text" v-model='limit' class="limit-width" > <span v-if="showError" class="errMsg">{{this.errorMsg}}</span><spinner-component v-if="postLoading"></spinner-component></th>
+                Person List<button class="btn btn-success btn-sm refresh-btn-align" @click="getPersonList()">Refresh List</button> Collection Size: <input type="text" v-model='limit' class="limit-width" placeholder="10" > <span v-if="showError" class="errMsg">{{this.errorMsg}}</span><spinner-component v-if="postLoading"></spinner-component></th>
       </tr>
     <tr>
       <th scope="col">#</th>
