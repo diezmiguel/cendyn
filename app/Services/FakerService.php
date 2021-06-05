@@ -11,6 +11,7 @@ class FakerService
     public static function generatePersonCollection($limit = 10): ?array
     {
         $faker = \Faker\Factory::create();
+        $personCollection = [];
         for ($i = 1; $i <= $limit; ++$i) {
             $data['id'] = $i;
             $data['first_name'] = $faker->firstName;

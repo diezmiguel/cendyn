@@ -18,7 +18,7 @@ class PersonController extends Controller
 
     public function index(): JsonResponse
     {
-        $limit = request()->input('limit', 10);
+        $limit = request()->input('limit', 10) ?? 10;
         if ((int) $limit > 100) {
             $data['error']['code'] = 400;
             $data['error']['message'] = 'The maximum llimit is 100.';
