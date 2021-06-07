@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Services\FakerService;
 use App\Services\PersonService;
+use App\Utils\Constants;
+use App\Utils\Validate;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 
@@ -19,11 +21,8 @@ class PersonController extends Controller
     public function index(): JsonResponse
     {
         $limit = request()->input('limit', 10) ?? 10;
-        if ((int) $limit > 100) {
-            $data['error']['code'] = 400;
-            $data['error']['message'] = 'The maximum llimit is 100.';
-
-            return response()->json($data, 400);
+        if (!Validate::validateLimit($limit)) {
+            return response()->json(Constants::LIMIT_ERROR, 400);
         }
         $data = FakerService::generatePersonCollection($limit);
 
