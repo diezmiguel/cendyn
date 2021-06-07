@@ -14,6 +14,9 @@ class QuoteService
         $this->api = $apiService;
     }
 
+    /**
+     * Return quote item from API.
+     */
     public function getQuote(): string
     {
         return $this->api->getQuote();

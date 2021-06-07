@@ -8,7 +8,10 @@ class FakerService
     {
     }
 
-    public static function generatePersonCollection($limit = 10): ?array
+    /**
+     * Returns a list of fake persons.
+     */
+    public static function generatePersonCollection(int $limit = 10): ?array
     {
         $faker = \Faker\Factory::create();
         $personCollection = [];

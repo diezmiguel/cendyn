@@ -18,6 +18,9 @@ class PersonController extends Controller
         $this->personService = $personService;
     }
 
+    /**
+     * Return list of fake Persons.
+     */
     public function index(): JsonResponse
     {
         $limit = request()->input('limit', 10) ?? 10;
@@ -32,7 +35,7 @@ class PersonController extends Controller
     /**
      * Returns the posts by the give user.
      */
-    public function show($id): ?string
+    public function show(int $id): ?string
     {
         $data = $this->personService->getUserPosts($id);
 

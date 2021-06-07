@@ -14,7 +14,7 @@ class PersonService
         $this->api = $ApiService;
     }
 
-    public function getUserPosts($userId = null): string
+    public function getUserPosts(int $userId = null): string
     {
         return $this->api->getPostsByUser($userId);
     }

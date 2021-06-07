@@ -4,7 +4,10 @@ namespace App\Utils;
 
 class Validate
 {
-    public static function validateLimit($limit)
+    /**
+     * validates the  limit limit.
+     */
+    public static function validateLimit(int $limit)
     {
         if ((int) $limit > 100) {
             return false;

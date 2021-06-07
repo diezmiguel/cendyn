@@ -15,6 +15,9 @@ class ApiService
         $this->api = new Client();
     }
 
+    /**
+     * Return a string quote.
+     */
     public function getQuote(): ?string
     {
         try {
@@ -33,7 +36,7 @@ class ApiService
      *
      * @re
      */
-    public function getPostsByUser($userId): ?string
+    public function getPostsByUser(int $userId): ?string
     {
         try {
             $request = $this->api->get(env('TYPICODE_URL').'?userId='.$userId);
